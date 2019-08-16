@@ -1,0 +1,95 @@
+.my_header,.my_footer{
+    width: 100%;
+}
+/* 设置footer和header高 */
+@media screen and (min-width: 992px){
+    .my_header{  height: 5rem; }
+  .my_footer{  height: 17rem; }
+}
+@media screen and (max-width: 991px){
+    .my_header{ height: 11rem;}
+    .my_footer{ height: 30rem;}
+
+}
+.carousel-indicators .active{
+    background-color: #0aa1ed;
+}
+/* 轮播图样式  */
+.carousel-control-prev,
+.carousel-control-next{
+    width:4%;
+    height: 20%;
+    background-color:#aaa ;
+    border-radius: 0.25rem;
+    top:40%;
+}
+.carousel-indicators li{
+    width: 0.8rem;height:0.8rem;
+    background-color: #fff;
+    margin-left:0.4rem ;
+    margin-right:0.4rem ;
+    border-radius: 50%;
+}
+.carousel-indicators li.active{
+    background: #0aa1ed;
+}
+
+
+.carousel-indicators :hover{
+    cursor: pointer;
+
+}
+
+/**/
+
+/* 1L标题*/
+.font_title{
+    font-size: 1.5rem;
+
+    font-weight: bold;
+}
+.border-bottom{border-width:2px !important;}
+
+/* 商品展示高度 */
+.top_height{height: 377px;}
+.bottom_height{height:233px; }
+.bg_l{background-color: #e8e8e8;}
+/*解决外边距溢出 */
+.before_margin:before{
+    content: "";
+    display:table;
+}
+.w-40{width:40%;}
+.font24{font-size:1.5rem;}
+/* 1L上面左图片位置 */
+.my_img_position{
+    cursor: pointer;
+    margin-top:-200px;
+    margin-right:22px;
+    transition: all 1s;
+
+}
+
+/*1L上面，左边图片过渡终点*/
+.my_img_position:hover{
+
+    transform: scale(1.1);
+
+}
+
+/* 1L上面，右边图片位置*/
+/* 1L上面左图片位置 */
+.my_img_position2{
+    cursor: pointer;
+    margin-top:-183px;
+    margin-right:36px;
+    transition: all 1s;
+
+}
+
+/*1L上面，右边边图片过渡终点*/
+.my_img_position2:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
