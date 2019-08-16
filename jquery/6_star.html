@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #d1 {
+            width: 800;
+            height: 800;
+            background-color: lightcyan;
+            top: 50%;
+            left: 50%;
+        }
+        
+        .color {
+            background-color: lightcyan;
+        }
+    </style>
+</head>
+
+<body class="color">
+    <div id="d1">
+        <img src="img/star.png">
+        <img src="img/star.png">
+        <img src="img/star.png">
+        <img src="img/star.png">
+        <img src="img/star.png">
+        <img src="img/star.png">
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script>
+        //单击小星星，闪烁三次，最后消失
+        //(先使用回调函数实现，再使用排队简化)
+        $("img").mouseover(function() {
+            var $star = $(this);
+            for (var i = 0; i < 5; i++) {
+                $star.fadeOut().fadeIn();
+                $("img").mouseover(function() {
+
+                    $star
+                        .animate( //本质:js定时器——异步
+                            {
+
+                                width: 500,
+                                height: 500,
+                                opacity: 30,
+
+                            },
+                            5000,
+
+                        ).hide()
+
+                })
+
+            }
+            $star.fadeOut();
+        })
+    </script>
+</body>
+
+</html>
